@@ -16,8 +16,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Boilerplate React Next.js TypeScript TailwindCSS",
-  description: "Simple starter set of React.js, Next.js, TypeScript, and TailwindCSS",
+  title: "Loan Tokenization Dashboard",
+  description: "A dashboard for managing and visualizing loan tokenization processes.",
 };
 
 export default function RootLayout({
