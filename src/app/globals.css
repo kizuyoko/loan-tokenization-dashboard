@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f0f4ff; /* blue300 */
+  --mainBackground: #ffffff; /* white */
+  --foreground: #171717; /* gray900 */
+  --font-text: var(--font-inter);
+  --font-title: var(--font-playfair);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #171717; /* gray700 */
+    --mainBackground: #0a0a0a; /* gray800 */
+    --font-text: var(--font-inter);
+    --font-title: var(--font-playfair);
+    --foreground: #f0f4ff; /* blue300 */
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-text), sans-serif;
+}
+
+main {
+  background: var(--mainBackground);
+}
+
+h1, h2 {
+  font-family:  var(--font-title), serif;
+  @apply text-3xl font-bold text-purple-700 text-center
+}
+
+p {
+  @apply text-center
+}
+
+.text-link {
+  @apply hover:underline text-sky-800 font-semibold text-lg
+}
+
+.image-link {
+  @apply transform transition-transform duration-100 hover:rotate-45
+}
+
+.button {
+  @apply rounded-full border border-solid font-semibold border-transparent transition-colors px-4 py-2 bg-sky-900 text-white hover:bg-sky-800 hover:shadow mt-6
+}
+
