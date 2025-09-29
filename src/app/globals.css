@@ -33,9 +33,12 @@ main {
   background: var(--mainBackground);
 }
 
-h1, h2 {
+h1{
   font-family:  var(--font-title), serif;
   @apply text-3xl font-bold text-purple-700 text-center
+}
+h2 {
+  @apply text-lg text-blue-800 font-semibold text-center
 }
 
 p {
