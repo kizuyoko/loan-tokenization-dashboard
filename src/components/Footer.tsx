@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer className="row-start-3 flex gap-4 flex-wrap items-center justify-center">
       <a
         className="image-link"
-        href="https://github.com/kizuyoko/boilerplate-react-nextjs-typescript-tailwind/"
+        href="https://github.com/kizuyoko/loan-tokenization-dashboard/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub Repository"

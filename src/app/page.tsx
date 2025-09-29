@@ -7,15 +7,29 @@ export default function Home() {
       role="main"
       aria-label="Main content of the homepage"
     >
-      <h1>Boilerplate React Next.js TypeScript TailwindCSS</h1>
-      <p>This is very easy and simple starter set of React.js, Next.js, TypeScript, and TailwindCSS.</p>
-      <p>Feel free to copy and use it!</p>
-      <Button
-        href="/about"
-        ariaLabel="Go to About page for site details"
-      >
-        About
-      </Button>
+      <h1>Loan Tokenization Dashboard</h1>
+      <p>This is a dashboard for managing and visualizing loan tokenization processes.</p>
+      <p>Feel free to explore the features!</p>
+      <div className="flex flex-wrap gap-4 justify-center mt-4">
+        <Button
+          href="/profile"
+          ariaLabel="Go to Profile page for user details"
+        >
+          Profile
+        </Button>
+        <Button
+          href="/upload"
+          ariaLabel="Go to Upload page for uploading documents"
+        >
+          Upload
+        </Button>
+        <Button
+          href="/dashboard"
+          ariaLabel="Go to Dashboard page for user insights"
+        >
+          Dashboard
+        </Button>
+      </div>
     </main>
   );
 }

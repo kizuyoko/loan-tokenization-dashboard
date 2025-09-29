@@ -1,6 +1,8 @@
 export const siteConfig = {
   nav: [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "Profile", href: "/profile" },
+    { name: "Upload", href: "/upload" },
+    { name: "Dashboard", href: "/dashboard" },
   ],
 };
