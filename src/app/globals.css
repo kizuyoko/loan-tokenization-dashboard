@@ -53,4 +53,16 @@ p {
 .button {
   @apply rounded-full border border-solid font-semibold border-transparent transition-colors px-4 py-2 bg-sky-900 text-white hover:bg-sky-800 hover:shadow mt-6
 }
+.input-container {
+  @apply flex items-center
+}
+
+.label {
+  @apply w-28 mr-2 text-right
+}
+
+.input-select {
+  @apply border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-sky-800 flex-1
+}
+
 
