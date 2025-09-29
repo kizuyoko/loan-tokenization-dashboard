@@ -8,6 +8,7 @@ type ButtonProps = {
   onClick?: () => void;
   className?: string;
   ariaLabel?: string;
+  type?: "button" | "submit" | "reset";
 };
 
 export const Button = ({
@@ -16,6 +17,8 @@ export const Button = ({
   onClick,
   className = "",
   ariaLabel,
+  type,
+  ...props
 }: ButtonProps) => {
 
   if (href) {
@@ -24,6 +27,7 @@ export const Button = ({
         href={href} 
         className={`button ${className}`}
         aria-label={ariaLabel}
+        {...props}
       >
         {children}
       </Link>
@@ -34,7 +38,8 @@ export const Button = ({
     <button 
       onClick={onClick} 
       className={`button ${className}`} 
-      type="button"
+      type={type || "button"}
+      {...props}
     >
       {children}
     </button>
