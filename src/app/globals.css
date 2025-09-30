@@ -57,15 +57,15 @@ p {
   @apply rounded-full border border-solid font-semibold border-transparent transition-colors px-4 py-2 bg-sky-900 text-white hover:bg-sky-800 hover:shadow mt-6
 }
 .input-container {
-  @apply flex items-center
+  @apply flex items-center flex-col sm:flex-row
 }
 
 .label {
-  @apply w-36 mr-2 text-right
+  @apply sm:w-36 sm:mr-2 sm:text-right text-left w-full
 }
 
 .input-select {
-  @apply border rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-sky-800 flex-1
+  @apply border rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-sky-800 flex-1 w-full
 }
 
 button:disabled {
