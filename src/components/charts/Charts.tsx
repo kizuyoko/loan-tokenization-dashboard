@@ -14,7 +14,7 @@ export const Charts: React.FC<ChartsProps> = ({ loans }) => {
 
   const chartsData = [
     {
-      title: "Total Loan Amount",
+      title: "Loan Amount",
       data: [
         { name: "Loaned", value: totalLoan - totalTokenized },
         { name: "Remaining", value: totalTokenized },
@@ -22,7 +22,7 @@ export const Charts: React.FC<ChartsProps> = ({ loans }) => {
       colors: ["#4CAF50", "#FF7043"],
     },
     {
-      title: "Total Tokenized Amount",
+      title: "Tokenized Amount",
       data: [
         { name: "Tokenized", value: totalTokenized },
         { name: "Not Tokenized", value: totalLoan - totalTokenized },
@@ -30,7 +30,7 @@ export const Charts: React.FC<ChartsProps> = ({ loans }) => {
       colors: ["#2196F3", "#FFC107"],
     },
     {
-      title: "Total Invested Amount",
+      title: "Invested Amount",
       data: [
         { name: "Invested", value: totalInvested },
         { name: "Uninvested", value: totalLoan - totalInvested },
@@ -38,7 +38,7 @@ export const Charts: React.FC<ChartsProps> = ({ loans }) => {
       colors: ["#9C27B0", "#FF5722"],
     },
     {
-      title: "Loan Performance",
+      title: "Performance",
       data: [
         { name: "Performing", value: loans.filter(l => l.status === "Active").length },
         { name: "Defaulted", value: loans.filter(l => l.status === "Expired").length },
