@@ -2,16 +2,16 @@
 
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
-const data = [
-  { name: "Tokenized", value: 3000 },
-  { name: "Not Tokenized", value: 7000 },
-];
+type DonutChartProps = {
+  title: string;
+  data: { name: string; value: number }[];
+  colors?: string[];
+};
 
-const COLORS = ["#4CAF50", "#FF7043"];
-
-export const TokenizationChart = () => {
+export const DonutChart = ({ title, data, colors = ["#4CAF50", "#FF7043"] }: DonutChartProps) => {
   return (
-    <div className="w-full h-64">
+    <div className="flex flex-col items-center w-full h-64">
+      <h3 className="mb-2 font-semibold">{title}</h3>
       <ResponsiveContainer>
         <PieChart>
           <Pie
@@ -24,7 +24,7 @@ export const TokenizationChart = () => {
             dataKey="value"
           >
             {data.map((entry, index) => (
-              <Cell key={entry.name} fill={COLORS[index % COLORS.length]} />
+              <Cell key={entry.name} fill={colors[index % colors.length]} />
             ))}
           </Pie>
           <Tooltip />

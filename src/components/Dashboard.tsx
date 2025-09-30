@@ -1,8 +1,7 @@
 "use client";
 import { useState } from 'react';
-import { Button } from './ui/Button';
 import { Card } from './ui/Card';
-import { TokenizationChart } from './charts/TokenizationChart';
+import { Charts } from './charts/Charts';
 
 export const Dashboard = () => {
   const [mockData, setMockData] = useState({
@@ -24,7 +23,7 @@ export const Dashboard = () => {
           <p>€{mockData.totalInvested.toLocaleString()}</p>
         </Card>
       </div>
-      <TokenizationChart />
+      <Charts />
     </>
   );
 };
