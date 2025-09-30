@@ -19,7 +19,18 @@ export const DonutChart = ({ title, data, colors = ["#4CAF50", "#FF7043"] }: Don
             cx="50%"
             cy="50%"
             labelLine={false}
-            label={({ name, percent }) => `${name} ${((percent as number) * 100).toFixed(0)}%`}
+            label={({ cx, cy, midAngle, innerRadius, outerRadius, percent, name }) => {
+              const RADIAN = Math.PI / 180;
+              const radius = (innerRadius as number) + ((outerRadius as number) - (innerRadius as number)) * 0.5;
+              const x = (cx as number) + radius * Math.cos(-(midAngle as number) * RADIAN);
+
+              const y = (cy as number) + radius * Math.sin(-(midAngle as number) * RADIAN);
+              return (
+                <text x={x} y={y} fill="black" textAnchor="middle" dominantBaseline="central">
+                  {`${name} ${((percent as number) * 100).toFixed(0)}%`}
+                </text>
+              );
+            }}
             outerRadius={80}
             dataKey="value"
           >

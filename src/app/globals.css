@@ -61,7 +61,7 @@ p {
 }
 
 .label {
-  @apply w-28 mr-2 text-right
+  @apply w-36 mr-2 text-right
 }
 
 .input-select {

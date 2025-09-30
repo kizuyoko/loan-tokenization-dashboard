@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ProfilePage() {
   return (
-    <main className="flex flex-col gap-4 items-center justify-center p-4 sm:p-8 shadow">
+    <main className="flex flex-col items-center justify-center w-full max-w-xl gap-4 p-4 shadow sm:p-8" role="main" aria-label="Dashboard main content">
       <h1>User Profile</h1>
       <p>View and edit your profile information here.</p>
       <ProfileForm />

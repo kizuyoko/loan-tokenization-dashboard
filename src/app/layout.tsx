@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="antialiased">
-        <div className="grid items-center justify-items-center min-h-screen p-4 pb-20 gap-20 sm:p-20">
+        <div className="grid items-center min-h-screen gap-4 p-2 pb-20 justify-items-center sm:p-4">
           <Header /> 
           {children}
           <Footer />
