@@ -2,7 +2,7 @@ export const LoanTable = () => {
   return (
     <div className="w-full p-4 border rounded">
       <h2 className="text-left">Loan Details</h2>
-      <table className="w-full mt-2 table-auto">
+      <table className="loan-table">
         <thead>
           <tr>
             <th>Loan ID</th>
@@ -15,11 +15,18 @@ export const LoanTable = () => {
         <tbody>
           {/* Mock data rows */}
           <tr>
-            <td>1</td>
-            <td>€100,000</td>
-            <td>€60,000</td>
-            <td>Active</td>
-            <td>Edit</td>
+            <td className="text-right">1</td>
+            <td className="text-right">€100,000</td>
+            <td className="text-right">€60,000</td>
+            <td className="text-center">Active</td>
+            <td className="text-center">Edit</td>
+          </tr>
+          <tr>
+            <td className="text-right">1</td>
+            <td className="text-right">€100,000</td>
+            <td className="text-right">€60,000</td>
+            <td className="text-center">Active</td>
+            <td className="text-center">Edit</td>
           </tr>
         </tbody>
       </table>

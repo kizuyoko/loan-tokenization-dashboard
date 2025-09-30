@@ -76,4 +76,22 @@ button:disabled {
   @apply text-red-600
 }
 
+.loan-table {
+  @apply w-full border-collapse mt-2 table-auto border border-gray-300;
+}
 
+.loan-table tr:hover td{
+  @apply bg-gray-300;
+}
+
+.loan-table th,
+.loan-table td {
+  @apply border border-gray-300 p-2;
+}
+
+.loan-table th {
+  @apply bg-gray-100 font-semibold text-center
+}
+.loan-table tr:nth-child(even) {
+  @apply bg-gray-50;
+}
