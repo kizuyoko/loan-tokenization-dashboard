@@ -77,7 +77,7 @@ p {
 }
 
 .input-select {
-  @apply border rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-sky-800 flex-1 w-full
+  @apply rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-sky-800 flex-1 w-full
 }
 
 button:disabled {
@@ -90,6 +90,18 @@ button:disabled {
 
 .success-text {
   @apply text-green-600
+}
+
+.input-border, .select-border {
+  @apply border-gray-300 border
+}
+
+.error-border {
+  @apply border-red-500 border-2
+}
+
+.success-border {
+  @apply border-green-500 border-2
 }
 
 .dashboard-card {

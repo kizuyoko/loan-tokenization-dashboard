@@ -3,18 +3,19 @@ import React from "react";
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   hasError?: boolean;
   ariaLabel?: string;
-  className?: string;
   success?: boolean;
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, hasError, ariaLabel, success, ...props }, ref) => {
+  ({ hasError, ariaLabel, success, ...props }, ref) => {
     return (
-      <div className={`input-container ${className}`}>
-        <label className={`label ${hasError ? "error-text" : ""} ${success ? "success-text" : ""}`}>{props.placeholder}</label>
+      <div className={`input-container`}>
+        <label htmlFor={props.name} className={`label ${hasError ? "error-text" :success ? "success-text" : ""}`} aria-label={props.placeholder}>{props.placeholder}</label>
         <input
+          id={props.name}
+          name={props.name}
           ref={ref}
-          className={`input-select  ${hasError ? "border-red-500 border-2" : "border-gray-300"} ${success ? "border-green-500 border-2" : ""} ${  className}`}
+          className={`input-select  ${hasError ? "error-border" : success ? "success-border" : "input-border"}`}
           aria-label={ariaLabel || props.placeholder}
           {...props}
         />
