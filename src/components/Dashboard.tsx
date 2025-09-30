@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Button } from './ui/Button';
 import { Card } from './ui/Card';
+import { TokenizationChart } from './charts/TokenizationChart';
 
 export const Dashboard = () => {
   const [mockData, setMockData] = useState({
@@ -23,7 +24,7 @@ export const Dashboard = () => {
           <p>€{mockData.totalInvested.toLocaleString()}</p>
         </Card>
       </div>
-      <Button onClick={() => alert("Graph placeholder")}>Show Chart</Button>
+      <TokenizationChart />
     </>
   );
 };
