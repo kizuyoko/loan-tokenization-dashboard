@@ -2,45 +2,32 @@
 import React from "react";
 import Link from "next/link";
 
-type ButtonProps = {
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
   href?: string;
-  onClick?: () => void;
-  className?: string;
   ariaLabel?: string;
-  type?: "button" | "submit" | "reset";
 };
 
-export const Button = ({
-  children,
-  href,
-  onClick,
-  className = "",
-  ariaLabel,
-  type,
-  ...props
-}: ButtonProps) => {
+export const Button = (allProps: ButtonProps) => {
+  const { children, href, className = "", ariaLabel, onClick, type, ...rest } = allProps;
 
+  // If href is provided we render a Next.js Link. Only pass anchor-safe props.
   if (href) {
+    const anchorProps: React.AnchorHTMLAttributes<HTMLAnchorElement> = {};
+    // pick a few common anchor props from rest if present
+  const maybe = rest as Partial<React.AnchorHTMLAttributes<HTMLAnchorElement>>;
+  if (maybe.target) anchorProps.target = maybe.target;
+  if (maybe.rel) anchorProps.rel = maybe.rel;
+
     return (
-      <Link 
-        href={href} 
-        className={`button ${className}`}
-        aria-label={ariaLabel}
-        {...props}
-      >
+      <Link href={href} className={`button ${className}`} aria-label={ariaLabel} {...anchorProps}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button 
-      onClick={onClick} 
-      className={`button ${className}`} 
-      type={type || "button"}
-      {...props}
-    >
+    <button onClick={onClick} className={`button ${className}`} type={type || "button"} aria-label={ariaLabel} {...rest}>
       {children}
     </button>
   );

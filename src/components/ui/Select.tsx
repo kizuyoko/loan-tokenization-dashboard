@@ -1,18 +1,24 @@
 import React from "react";
 
-type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement> & {
+interface Option {
+  value: string;
+  label: string;
+}
+interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label?: string;
-  options: { value: string; label: string }[];
-};
+  options: Option[];
+  hasError?: boolean; 
+}
+
 
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ className, label, options, ...props }, ref) => {
+  ({ className, label, options, hasError, ...props }, ref) => {
     return (
       <div className={`input-container ${className}`}>
-        {label && <label className="label">{label}</label>}
+        {label && <label className={`label ${hasError ? "error-text" : ""}`}>{label}</label>}
         <select
           ref={ref}
-          className={`input-select ${className}`}
+          className={`input-select ${className} ${hasError ? "border-red-500" : "border-gray-300"}`}
           {...props}
         >
           {options.map((option) => (

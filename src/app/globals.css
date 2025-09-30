@@ -65,7 +65,15 @@ p {
 }
 
 .input-select {
-  @apply border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-sky-800 flex-1
+  @apply border rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-sky-800 flex-1
+}
+
+button:disabled {
+  @apply opacity-50 cursor-not-allowed
+}
+
+.error-text {
+  @apply text-red-600
 }
 
 
