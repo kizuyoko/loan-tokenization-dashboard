@@ -88,6 +88,10 @@ button:disabled {
   @apply text-red-600
 }
 
+.success-text {
+  @apply text-green-600
+}
+
 .dashboard-card {
   @apply border rounded border-gray-300 shadow-xs
 }

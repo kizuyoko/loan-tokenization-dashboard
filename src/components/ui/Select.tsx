@@ -8,17 +8,18 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label?: string;
   options: Option[];
   hasError?: boolean; 
+  success?: boolean;
 }
 
 
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ className, label, options, hasError, ...props }, ref) => {
+  ({ className, label, options, hasError, success, ...props }, ref) => {
     return (
       <div className={`input-container ${className}`}>
-        {label && <label className={`label ${hasError ? "error-text" : ""}`}>{label}</label>}
+        {label && <label className={`label ${hasError ? "error-text" : ""} ${success ? "success-text" : ""}`}>{label}</label>}
         <select
           ref={ref}
-          className={`input-select ${className} ${hasError ? "border-red-500" : "border-gray-300"}`}
+          className={`input-select ${className} ${hasError ? "border-red-500 border-2" : "border-gray-300"} ${success ? "border-green-500 border-2" : "border-gray-300"}`}
           {...props}
         >
           {options.map((option) => (

@@ -11,7 +11,7 @@ export default function ProfilePage() {
   return (
     <main className="flex flex-col items-center justify-center w-full max-w-xl gap-4 p-4 shadow sm:p-8" role="main" aria-label="Dashboard main content">
       <h1>User Profile</h1>
-      <p>View and edit your profile information here.</p>
+      <p>You can create your profile here.</p>
       <ProfileForm />
     </main>
   );
