@@ -53,9 +53,17 @@ p {
   @apply transform transition-transform duration-100 hover:rotate-45
 }
 
-.button {
-  @apply rounded-full border border-solid font-semibold border-transparent transition-colors px-4 py-2 bg-sky-900 text-white hover:bg-sky-800 hover:shadow mt-6
+.button, .small-button {
+  @apply rounded-full border border-solid font-semibold border-transparent transition-colors px-4 py-2 bg-sky-900 text-white hover:bg-sky-800 hover:shadow
 }
+.small-button {
+  @apply text-sm px-3 py-1 mx-1 bg-blue-800 hover:bg-blue-700
+}
+
+.small-button:first-child  {
+  @apply bg-amber-600 hover:bg-amber-500
+}
+
 .input-container {
   @apply flex items-center flex-col sm:flex-row
 }
@@ -94,4 +102,14 @@ button:disabled {
 }
 .loan-table tr:nth-child(even) {
   @apply bg-gray-50;
+}
+
+.active, .expired {
+  @apply text-center font-bold;
+}
+.active {
+  @apply text-green-800
+}
+.expired {
+  @apply text-red-800
 }

@@ -20,10 +20,10 @@ export const UploadForm = () => {
   };
 
   return (
-    <form onSubmit={handleUpload} className="flex flex-col gap-4">
+    <form onSubmit={handleUpload} className="flex flex-col items-center gap-4" aria-label="Document upload form">
       <Input type="file" placeholder="Choose a file" accept=".csv" onChange={handleFileChange} />
-      {file && <p className="text-lg text-blue-800 font-bold">Selected file: {file.name}</p>}
-      <Button type="submit" className="btn-primary">Upload</Button>
+      {file && <p className="text-lg font-bold text-blue-800">Selected file: {file.name}</p>}
+      <Button type="submit">Upload</Button>
     </form>
   );
 };

@@ -1,3 +1,5 @@
+import { Button } from "./ui/Button";
+
 export const LoanTable = () => {
   return (
     <div className="w-full p-4 border rounded">
@@ -18,15 +20,21 @@ export const LoanTable = () => {
             <td className="text-right">1</td>
             <td className="text-right">€100,000</td>
             <td className="text-right">€60,000</td>
-            <td className="text-center">Active</td>
-            <td className="text-center">Edit</td>
+            <td className="active">Active</td>
+            <td className="text-center">
+              <Button small>Expire</Button>
+              <Button small>Tokenize</Button>
+            </td>
           </tr>
           <tr>
-            <td className="text-right">1</td>
+            <td className="text-right">2</td>
             <td className="text-right">€100,000</td>
             <td className="text-right">€60,000</td>
-            <td className="text-center">Active</td>
-            <td className="text-center">Edit</td>
+            <td className="expired">Expired</td>
+            <td className="text-center">
+              <Button small>Expire</Button>
+              <Button small>Tokenize</Button>
+            </td>
           </tr>
         </tbody>
       </table>
