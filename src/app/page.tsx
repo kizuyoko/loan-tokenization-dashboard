@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
 
 export default function Home() {
   return (
@@ -10,25 +9,11 @@ export default function Home() {
     >
       <h1>Loan Tokenization Dashboard</h1>
       <p>This is a demo site, created for showcasing loan tokenization features.</p>
-      <form 
-        className="flex flex-col items-center w-full max-w-sm gap-4 mt-2" 
-        aria-label="Login form"
-      >
-        <Input
-          type="text"
-          placeholder="Username"
-        />
-        <Input
-          type="password"
-          placeholder="Password"
-        />
-        <Button
-          href="/dashboard"
-          ariaLabel="Go to Dashboard page for user insights"
-        >
-          Login
-        </Button>
-      </form>
+     <div className="flex flex-col justify-center w-full gap-2 sm:items-center sm:flex-row">
+        <Button href="/dashboard">Dashboard</Button>
+        <Button href="/profile">Profile</Button>
+        <Button href="/upload">Upload</Button>
+      </div>
     </main>
   );
 }

@@ -54,7 +54,7 @@ p {
 }
 
 .button, .small-button {
-  @apply rounded-full border border-solid font-semibold border-transparent transition-colors px-4 py-2 bg-sky-900 text-white hover:bg-sky-800 hover:shadow
+  @apply rounded-full border border-solid font-semibold border-transparent transition-colors px-4 py-2 bg-sky-900 text-white hover:bg-sky-800 hover:shadow text-center
 }
 .small-button {
   @apply text-sm px-3 py-1 ml-1 bg-green-800 hover:bg-green-700
