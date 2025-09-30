@@ -45,6 +45,10 @@ p {
   @apply text-center
 }
 
+.mobile-hide {
+  @apply hidden sm:inline
+} 
+
 .text-link {
   @apply hover:underline text-sky-800 font-semibold text-lg
 }
@@ -87,6 +91,10 @@ button:disabled {
 .dashboard-card {
   @apply border rounded border-gray-300 shadow-xs
 }
+.card-total {
+  @apply text-3xl font-bold text-center
+} 
+
 
 .loan-table {
   @apply w-full border-collapse mt-2 table-auto border border-gray-300;
@@ -116,4 +124,7 @@ button:disabled {
 }
 .expired {
   @apply text-red-800
+}
+.edit-cell {
+  @apply text-center sm:w-46 w-30
 }
