@@ -1,14 +1,17 @@
 import { DonutChart } from "./DonutChart";
+import { chartsData } from "@/data/chartData";
 
 export const Charts = () => {
   return (
-    <DonutChart
-      title="Tokenization Status"
-      data={[
-        { name: "Tokenized", value: 3000 },
-        { name: "Not Tokenized", value: 7000 },
-      ]}
-      colors={["#4CAF50", "#FF7043"]}
-    />
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {chartsData.map((chart) => (
+        <DonutChart
+          key={chart.title}
+          title={chart.title}
+          data={chart.data}
+          colors={chart.colors}
+        />
+      ))}
+    </div>
   );
 };
