@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "./ui/Input";
 
-export const UploadForm = () => {
+export const ImportForm = () => {
   const [file, setFile] = useState<File | null>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,8 +14,8 @@ export const UploadForm = () => {
   const handleUpload = (e: React.FormEvent) => {
     e.preventDefault();
     if (file) {
-      console.log("Uploading:", file.name);
-      // Handle file upload logic here
+      console.log("Importing:", file.name);
+      // Handle file import logic here
     }
   };
 
@@ -23,7 +23,7 @@ export const UploadForm = () => {
     <form onSubmit={handleUpload} className="flex flex-col items-center gap-4" aria-label="Document upload form">
       <Input type="file" placeholder="Choose a file" accept=".csv" onChange={handleFileChange} />
       {file && <p className="text-lg font-bold text-blue-800">Selected file: {file.name}</p>}
-      <Button type="submit">Upload</Button>
+      <Button type="submit">Import</Button>
     </form>
   );
 };

@@ -12,7 +12,7 @@ export default function Home() {
      <div className="flex flex-col justify-center w-full gap-2 sm:items-center sm:flex-row">
         <Button href="/dashboard">Dashboard</Button>
         <Button href="/profile">Profile</Button>
-        <Button href="/upload">Upload</Button>
+        <Button href="/import">Import</Button>
       </div>
     </main>
   );

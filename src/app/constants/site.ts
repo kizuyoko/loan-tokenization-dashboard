@@ -3,6 +3,6 @@ export const siteConfig = {
     { name: "Home", href: "/" },
     { name: "Dashboard", href: "/dashboard" },
     { name: "Profile", href: "/profile" },
-    { name: "Upload", href: "/upload" },
+    { name: "Import", href: "/import" },
   ],
 };
