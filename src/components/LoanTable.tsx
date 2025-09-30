@@ -21,7 +21,7 @@ export const LoanTable = () => {
             <td className="text-right">€100,000</td>
             <td className="text-right">€60,000</td>
             <td className="active">Active</td>
-            <td className="text-center">
+            <td className="text-center w-50">
               <Button small>Expire</Button>
               <Button small>Tokenize</Button>
             </td>
@@ -31,7 +31,7 @@ export const LoanTable = () => {
             <td className="text-right">€100,000</td>
             <td className="text-right">€60,000</td>
             <td className="expired">Expired</td>
-            <td className="text-center">
+            <td className="text-center w-50">
               <Button small>Expire</Button>
               <Button small>Tokenize</Button>
             </td>
