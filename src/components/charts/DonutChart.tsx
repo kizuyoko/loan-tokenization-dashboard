@@ -11,7 +11,7 @@ type DonutChartProps = {
 export const DonutChart = ({ title, data, colors = ["#4CAF50", "#FF7043"] }: DonutChartProps) => {
   return (
     <div className="flex flex-col items-center w-full h-80">
-      <h3 className="mb-2 font-semibold">{title}</h3>
+      <h3 className="my-2 font-semibold">{title}</h3>
       <ResponsiveContainer>
         <PieChart>
           <Pie
