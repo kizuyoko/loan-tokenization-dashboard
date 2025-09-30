@@ -7,7 +7,7 @@ interface CardProps {
 
 export const Card = ({ title, children }: CardProps) => {
   return (
-    <div className="p-4 border rounded">
+    <div className="p-4 dashboard-card">
       <h2>{title}</h2>
       <div className="mt-2">{children}</div>
     </div>

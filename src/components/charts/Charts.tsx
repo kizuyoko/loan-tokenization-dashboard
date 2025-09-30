@@ -3,7 +3,7 @@ import { chartsData } from "@/data/chartData";
 
 export const Charts = () => {
   return (
-    <div className="grid w-full grid-cols-1 gap-4 p-4 border rounded lg:grid-cols-4 sm:grid-cols-2">
+    <div className="grid w-full grid-cols-1 gap-4 p-4 dashboard-card lg:grid-cols-4 sm:grid-cols-2">
       {chartsData.map((chart) => (
         <DonutChart
           key={chart.title}

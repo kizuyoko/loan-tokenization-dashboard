@@ -84,6 +84,10 @@ button:disabled {
   @apply text-red-600
 }
 
+.dashboard-card {
+  @apply border rounded border-gray-300 shadow-xs
+}
+
 .loan-table {
   @apply w-full border-collapse mt-2 table-auto border border-gray-300;
 }

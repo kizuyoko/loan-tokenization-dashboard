@@ -2,7 +2,7 @@ import { Button } from "./ui/Button";
 
 export const LoanTable = () => {
   return (
-    <div className="w-full p-4 border rounded">
+    <div className="w-full p-4 dashboard-card">
       <h2 className="text-left">Loan Details</h2>
       <table className="loan-table">
         <thead>
