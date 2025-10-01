@@ -69,7 +69,11 @@ p {
 }
 
 .input-container {
-  @apply flex items-center flex-col sm:flex-row
+  @apply flex items-center flex-col sm:flex-row mt-3
+}
+
+.input-container:first-child {
+  @apply mt-0;
 }
 
 .label {
@@ -87,6 +91,10 @@ button:disabled {
 .error-text {
   @apply text-red-600
 }
+
+.error-bottom {
+  @apply text-left sm:ml-38
+}  
 
 .success-text {
   @apply text-green-600
