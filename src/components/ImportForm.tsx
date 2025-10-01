@@ -21,7 +21,7 @@ export const ImportForm = () => {
 
   return (
     <form onSubmit={handleUpload} className="flex flex-col items-center gap-4" aria-label="Document upload form">
-      <Input type="file" placeholder="Choose a file" accept=".csv" onChange={handleFileChange} />
+      <Input type="file" name="uploadFile" label="Choose a file" accept=".csv" onChange={handleFileChange} />
       {file && <p className="text-lg font-bold text-blue-800">Selected file: {file.name}</p>}
       <Button type="submit">Import</Button>
     </form>
