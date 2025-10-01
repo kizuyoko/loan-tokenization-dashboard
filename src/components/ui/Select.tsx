@@ -5,26 +5,31 @@ interface Option {
   label: string;
 }
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  name: string;
   label?: string;
   options: Option[];
   hasError?: boolean; 
   success?: boolean;
-  placeholder?: string;
 }
 
 
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ label, options, hasError, success, ...props }, ref) => {
+  ({ name, label, options, hasError, success, ...props }, ref) => {
     return (
       <div className={`input-container`}>
-        <label htmlFor={props.name} className={`label ${hasError ? "error-text" :success ? "success-text" : ""}`}>{label}</label>
+        <label 
+          htmlFor={name} 
+          className={`label ${hasError ? "error-text" :success ? "success-text" : ""}`}
+        >
+          {label}
+        </label>
         <select
-          id={props.name}
-          name={props.name}
+          id={name}
+          name={name}
           ref={ref}
           className={`input-select ${hasError ? "error-border" : success ? "success-border" : "input-border"}`}
           {...props}
-          aria-label={label || props.placeholder}
+          aria-label={label || name}
         >
           {options.map((option) => (
             <option key={option.value} value={option.value}>

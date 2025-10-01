@@ -67,11 +67,11 @@ export const ProfileForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col w-full max-w-md gap-4">
-      <Input type="text" name="name" placeholder="Name" value={profile.name} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("name")} success={getSuccess("name")} />
-      <Input type="text" name="country" placeholder="Country" value={profile.country} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("country")} success={getSuccess("country")} />
-      <Input type="text" name="foundingYear" placeholder="Founding Year" value={profile.foundingYear} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("foundingYear")} success={getSuccess("foundingYear")} />
-      <Input type="text" name="totalPortfolio" placeholder="Total Portfolio" value={profile.totalPortfolio} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("totalPortfolio")} success={getSuccess("totalPortfolio")} />
-      <Input type="text" name="creditRiskScore" placeholder="Credit Risk Score" value={profile.creditRiskScore} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("creditRiskScore")} success={getSuccess("creditRiskScore")} />
+      <Input name="name" label="Name" value={profile.name} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("name")} success={getSuccess("name")} />
+      <Input name="country" label="Country" value={profile.country} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("country")} success={getSuccess("country")} />
+      <Input name="foundingYear" label="Founding Year" value={profile.foundingYear} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("foundingYear")} success={getSuccess("foundingYear")} />
+      <Input name="totalPortfolio" label="Total Portfolio" value={profile.totalPortfolio} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("totalPortfolio")} success={getSuccess("totalPortfolio")} />
+      <Input name="creditRiskScore" label="Credit Risk Score" value={profile.creditRiskScore} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("creditRiskScore")} success={getSuccess("creditRiskScore")} />
       <Select
         name="productType"
         label="Product Type"
@@ -87,11 +87,11 @@ export const ProfileForm = () => {
           { value: "Business", label: "Business" },
         ]}
       />
-      <Input type="text" name="websiteUrl" placeholder="Website URL" value={profile.websiteUrl} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("websiteUrl")} success={getSuccess("websiteUrl")} />
-      <Input type="text" name="contacts" placeholder="Contacts" value={profile.contacts} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("contacts")} success={getSuccess("contacts")} />
+      <Input name="websiteUrl" label="Website URL" value={profile.websiteUrl} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("websiteUrl")} success={getSuccess("websiteUrl")} />
+      <Input name="contacts" label="Contacts" value={profile.contacts} onChange={handleChange} onBlur={handleBlur} hasError={!!getError("contacts")} success={getSuccess("contacts")} />
       <div className="flex justify-end gap-2">
-      <Button type="reset" onClick={handleReset}>Clear</Button>
-      <Button type="submit" className="btn-primary" disabled={!isValid}>Create Profile</Button></div>
+        <Button type="reset" onClick={handleReset}>Clear</Button>
+        <Button type="submit" className="btn-primary" disabled={!isValid}>Create Profile</Button></div>
     </form>
   );
 };
