@@ -70,8 +70,8 @@ More projects demonstrate usage of APIs, unit tests, and Storybook
 First, clone the repository:
 
 ```bash
-git clone https://github.com/kizuyoko/boilerplate-react-nextjs-typescript-tailwind.git
-cd boilerplate-react-nextjs-typescript-tailwind
+git clone https://github.com/kizuyoko/loan-tokenization-dashboard.git
+cd loan-tokenization-dashboard
 ```
 Then, install dependencies and start the development server:
 
