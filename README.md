@@ -1,33 +1,71 @@
-# Credit institutions
+# Credit Institutions Implemented & Improvements
+![Dashboard Screenshot](public/screenshot_dashboard.png)
+
+## Links
+- [Demo](https://loan-tokenization-dashboard.vercel.app) - You can also explore the live demo here
+- [GitHub](https://loan-tokenization-dashboard.vercel.app) - 
+Currently private, but I can share access or make it public
+- [Portfolio](https://yoko-portfolio-kappa.vercel.app/) - 
+More projects demonstrate usage of APIs, unit tests, and Storybook
+
+## General
+### Implemented
+- Easy documentation (this)
+- Started this project as a clone of my old [boilerplate](https://github.com/kizuyoko/boilerplate-react-nextjs-typescript-tailwind)
+- GitHub repository set up
+- Simple Styling
+- Page: Home, Dashboard, Profile, Import
+- Vercel deployment
+
+### Improvements
+- Implement a design system & consistent CSS
+- Responsive Design (especially Dashboard), Dark mode, and animation
+- Add unit tests / Storybook stories
+- Connect all pages to real API
+- Add error handling for API calls
+- Devide GitHub branches by features
+
+## Home / Log in
+### Implemented
+- Simple landing page with buttons to Dashboard, Profile, and Import
+
+### Improvements
+- Add login functionality (currently only an intro page)
+  - Mock login form with state toggle for login/logout
+  - Future: connect to real authentication API, add validation and feedback messages
+
 ## Create profile
-Profile contains: Name, Country, Founding Year, Total Portfolio, Credit Risk Score, Product Type (Mortgage/Private/Business), Website URL, Contacts
-API Endpoint: create-profile (profile)
+### Implemented
+- Forms with React Hook Form
+- Simple validation for required fields, numbers, and URLs
+- Input fields display success/error states
 
-## Import loan data
-### Import with CSV
-Every loan has a unique loan id, status, amount, payment schedule, interest charged to the borrower, LTV (if collateral), risk group, URL reference to agreement.
+### Improvements
+- Better UX feedback (ex. tooltips)
+- Possibly integrate with backend API for real-time validation
 
-Click Upload CSV button to send their loan data to our platform
+## Import
+### Implemented
+- Simple page to upload a file.
 
-API Enpoint: upload-csv (file)
+### Improvements
+- Display success/error feedback
+- CSV preview before upload
+- Mock upload endpoint (upload-csv)
 
-## Loan status change
-Loan status changes when a loan is expired (ACTIVE, EXPIRED)
+## Dashboard
+### Implemented
+- Total imported loans and tokenized loans displayed with cards
+- Charts implemented with Recharts
+- Table displaying loan details
+- Mock loan data
+- Buttons to update each loan's status (Expire, Tokenize)
 
-## Tokenize loans
-Credit institutions can tokenize loans
-API Endpoint: tokenize-loans (loan)
+### Improvements
+- Add invested amount (currently assuming totalInvested = totalTokenized)
+- Use Redux Toolkit to manage loan state globally, connecting LoanTable, Cards, and Charts
 
-## View dashboard
-1. Summary of imported loans
-2. Summary of tokenized loans
-3. Chart
-    1. shows total loan amount (in EUR and %)
-    2. shows total tokenised amount (in EUR and %)
-    3. shows total invested amount (in EUR and %)
-    4. shows the performance of the loans
-
-## Getting Started
+# Getting Started
 
 First, clone the repository:
 
